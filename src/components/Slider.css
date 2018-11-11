@@ -1,0 +1,47 @@
+.slider-item {
+  width: 100vw;
+  height: 100vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controls .button {
+  font-size: 1.5em;
+  padding: 0 0.75em;
+  border-radius: 1em;
+  border: 0;
+  line-height: 1.75;
+  cursor: pointer;
+  outline: 0;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.slider-controls .button:focus,
+.slider-controls .button:hover {
+  background: black;
+  color: white;
+}
+
+.slider-controls .button:disabled {
+  background: #bdc3c7;
+  cursor: default;
+  color: black;
+}
+
+.slider-controls .button:first-child {
+  order: 1;
+}
+
+.slider-controls .button:last-child {
+  margin-right: 0.5em;
+}
