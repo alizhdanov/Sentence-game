@@ -1,0 +1,19 @@
+.input {
+  text-align: center;
+}
+
+.input input {
+  border: 0;
+  border-radius: 1em;
+  font-size: 2em;
+  padding: 0 1em;
+  outline: 0;
+  height: 1.75em;
+}
+
+.input .error {
+  color: #ff5043;
+  font-size: 1.75em;
+  margin-top: 0.5em;
+  height: 2em;
+}
