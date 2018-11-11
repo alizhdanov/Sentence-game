@@ -9,7 +9,7 @@ export const createFormItem = ({
   rules = [notEmpty],
 } = {}) => {
   return {
-    value: '',
+    value: defaultValue,
     error: validator(rules, defaultValue),
     touched: false,
     rules,
