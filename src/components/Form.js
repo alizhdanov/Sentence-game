@@ -9,8 +9,6 @@ import FormItem from './FormItem';
 import Heading from './Heading';
 
 class Form extends Component {
-  input = React.createRef();
-
   state = {
     activeIndex: 0,
   };
@@ -75,7 +73,6 @@ class Form extends Component {
               touched={item.touched}
               onChange={this.handleChange}
               onBlur={this.handleChange}
-              ref={this.input}
               autofocus
             />
           </div>

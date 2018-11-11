@@ -1,20 +1,7 @@
 import { combineReducers } from 'redux';
 import validator from '../utils/validator';
-import { notEmpty } from '../utils/rules';
+import createFormItem from '../utils/createFormItem';
 import { CHANGE_FORM } from './actions';
-
-// basic shape of form item with initial value and validation rules
-export const createFormItem = ({
-  defaultValue = '',
-  rules = [notEmpty],
-} = {}) => {
-  return {
-    value: defaultValue,
-    error: validator(rules, defaultValue),
-    touched: false,
-    rules,
-  };
-};
 
 export const initialState = {
   who: createFormItem(),

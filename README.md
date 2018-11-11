@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### Deployed version
 
-Publicly accessible link: http://sentence-game.now.sh
+Publicly accessible link: http://sentence-game.now.sh - deployed to now.sh free plan, so first visit might be long, because app froze.
 
 #### Run localy
 
@@ -33,7 +33,7 @@ npm start
 - `Redux` - state
 - `Jest` - testing
 - `prop-types` - typechecking
-- `react-slick` - fancy sliding between forms
+- `react-slick` - fancy sliding between inputs
 
 #### Structure
 

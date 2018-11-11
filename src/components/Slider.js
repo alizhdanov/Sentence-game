@@ -4,6 +4,8 @@ import SlickSlider from 'react-slick';
 import './Slider.css';
 
 class Slider extends Component {
+  slider = React.createRef();
+
   state = {
     activeIndex: 0,
   };
@@ -14,12 +16,11 @@ class Slider extends Component {
   };
 
   handleNext = () => {
-    // handle some sorta validation ???
-    this.slider.slickNext();
+    this.slider.current.slickNext();
   };
 
   handlePrev = () => {
-    this.slider.slickPrev();
+    this.slider.current.slickPrev();
   };
 
   handleSubmit = event => {
@@ -45,11 +46,7 @@ class Slider extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <SlickSlider
-          ref={slider => (this.slider = slider)}
-          className="slider"
-          {...settings}
-        >
+        <SlickSlider ref={this.slider} className="slider" {...settings}>
           {children}
         </SlickSlider>
         <div className="slider-controls">
