@@ -22,6 +22,10 @@ class Slider extends Component {
     this.slider.slickPrev();
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+  };
+
   render() {
     const { children, nextDisabled } = this.props;
     const { activeIndex } = this.state;
@@ -40,7 +44,7 @@ class Slider extends Component {
     };
 
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <SlickSlider
           ref={slider => (this.slider = slider)}
           className="slider"
@@ -57,6 +61,7 @@ class Slider extends Component {
             next
           </button>
           <button
+            type="button"
             className="button prev"
             disabled={activeIndex === 0}
             onClick={this.handlePrev}
@@ -64,7 +69,7 @@ class Slider extends Component {
             previous
           </button>
         </div>
-      </div>
+      </form>
     );
   }
 }

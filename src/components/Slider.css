@@ -6,10 +6,17 @@
   justify-content: center;
 }
 
+@media (max-width: 600px) {
+  .slider-item {
+    align-items: flex-start;
+  }
+}
+
 .slider-controls {
   position: absolute;
   bottom: 1em;
-  width: 100%;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +31,7 @@
   cursor: pointer;
   outline: 0;
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  background: #fff;
 }
 
 .slider-controls .button:focus,

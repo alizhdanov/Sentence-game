@@ -9,6 +9,8 @@
   padding: 0 1em;
   outline: 0;
   height: 1.75em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .input .error {
